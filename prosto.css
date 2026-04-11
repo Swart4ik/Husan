@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+
+:root {
+    --first: #003049;
+    --second: #d62828;
+    --third: #f77f00;
+    --fourth: #fcbf49;
+    --fifeth: #eae2b7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    position: relative;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--first);
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+}
+
+.wrapper h1 {
+    color: var(--fourth);
+    font-size: 100px;
+    z-index: 2;
+}
+
+.wrapper h4 {
+    top: 54%;
+    z-index: 1;
+    position: absolute;
+    color: var(--second);
+    font-size: 50px;
+}
+
+.wrapper p {
+    position: absolute;
+    color: var(--fifeth);
+    font-weight: 100;
+    right: 0px;
+    bottom: 0;
+    letter-spacing: 2px;
+}
+
+.edit {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: var(--first);
+    width: 80px;
+    color: var(--fifeth);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* --Edit window part-- */
+
+.edit_window {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.window {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    background-color:#011f30;
+    z-index: 6;
+}
+
+.window h1 {
+    font-size: 60px;
+    color: var(--fifeth);
+}
+
+.window .text1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--fourth);
+    font-size: 30px;
+    width: 100%;
+}
+
+.window .text1 input {
+    background-color: var(--first);
+    border: solid var(--fourth) 1px;
+    border-radius: 5px;
+    color: var(--fourth);
+    width: 50%;
+    height: 60%;
+    text-align: center;
+}
+
+.window .text2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #d62828;
+    font-size: 30px;
+    width: 100%;
+}
+
+.window .text2 input {
+    background-color: var(--first);
+    border: solid var(--second) 1px;
+    border-radius: 5px;
+    color: var(--second);
+    width: 50%;
+    height: 60%;
+    text-align: center;
+}
+
+.window .submit {
+    width: 30%;
+    background-color: rgb(105, 185, 24);
+    border: none;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+}
+
+.window .submit:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 1000px) {
+    .window {
+        width: 50%;
+    }
+}
+
+@media (max-width: 580px) {
+    .window {
+        width: 80%;
+    }
+}
